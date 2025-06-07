@@ -16,4 +16,9 @@ button.addEventListener('click', () => {
   const randomIndex = Math.floor(Math.random() * ideas.length);
   const idea = ideas[randomIndex];
   ideaBox.textContent = idea;
+
+  // Reset fade-in animation
+  ideaBox.classList.remove('show');
+  void ideaBox.offsetWidth; // triggers reflow
+  ideaBox.classList.add('show');
 });
