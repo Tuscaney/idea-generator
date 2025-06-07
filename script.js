@@ -8,3 +8,12 @@ const ideas = [
   "Write a short story that starts with a whisper.",
   "Design an album cover for a band that doesn't exist."
 ];
+
+const button = document.getElementById('idea-btn');
+const ideaBox = document.getElementById('idea-box');
+
+button.addEventListener('click', () => {
+  const randomIndex = Math.floor(Math.random() * ideas.length);
+  const idea = ideas[randomIndex];
+  ideaBox.textContent = idea;
+});
